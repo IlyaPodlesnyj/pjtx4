@@ -14,16 +14,17 @@ sudo -u postgres psql
 
   Внутри psql:
 
-sql
-Копировать
-Редактировать
 CREATE DATABASE testdb;
 CREATE USER testuser WITH PASSWORD 'testpassword';
 GRANT ALL PRIVILEGES ON DATABASE testdb TO testuser;
+\c testdb
+ALTER SCHEMA public OWNER TO testuser;
+GRANT ALL PRIVILEGES ON SCHEMA public TO testuser;
+ALTER USER testuser SET search_path TO public;
+
 \q
 
 5. Запускаем сервер
-   python manage.py makemigrations
    python manage.py migrate
    python manage.py runserver
 
