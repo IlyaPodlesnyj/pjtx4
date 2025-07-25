@@ -1,5 +1,7 @@
 Клонировать репозиторий 
+
 git clone https://github.com/IlyaPodlesnyj/pjtx4.git
+
 cd pjtx4
 
 Создать и активировать виртуальное окружение
