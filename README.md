@@ -1,15 +1,15 @@
-1. Клонировать репозиторий 
+Клонировать репозиторий 
 git clone https://github.com/IlyaPodlesnyj/pjtx4.git
 cd pjtx4
 
-2. Создать и активировать виртуальное окружение
+Создать и активировать виртуальное окружение
 python3 -m venv myenv
 source myenv/bin/activate
 
-3. Установить зависимости
+Установить зависимости
 pip install -r requirements.txt
 
-4. Установить и настроить PostgreSQL
+Установить и настроить PostgreSQL
 sudo -u postgres psql
 
 Внутри psql выполнить:
@@ -23,7 +23,7 @@ GRANT ALL PRIVILEGES ON SCHEMA public TO testuser;
 ALTER USER testuser SET search_path TO public;
 \q
 
-5. Запускаем сервер 
+Запускаем сервер 
 python manage.py migrate
 python manage.py runserver
 
