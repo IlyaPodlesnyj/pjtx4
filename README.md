@@ -23,6 +23,7 @@ GRANT ALL PRIVILEGES ON DATABASE testdb TO testuser;
 \q
 
 5. Запускаем сервер
+   python manage.py makemigrations
    python manage.py migrate
    python manage.py runserver
 
