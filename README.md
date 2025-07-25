@@ -16,7 +16,8 @@ source myenv/bin/activate
 
 pip install -r requirements.txt
 
-Установить и настроить PostgreSQL
+
+4. Установить и настроить PostgreSQL
 
 sudo -u postgres psql
 
@@ -39,7 +40,7 @@ ALTER USER testuser SET search_path TO public;
 \q
 
 
-4. Запускаем сервер
+5. Запускаем сервер
    
 python manage.py migrate
 
