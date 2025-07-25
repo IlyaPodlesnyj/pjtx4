@@ -12,7 +12,7 @@ pip install -r requirements.txt
 4. Установить и настроить PostgreSQL
 sudo -u postgres psql
 
-  Внутри psql:
+Внутри psql выполнить:
 
 CREATE DATABASE testdb;
 CREATE USER testuser WITH PASSWORD 'testpassword';
@@ -21,12 +21,11 @@ GRANT ALL PRIVILEGES ON DATABASE testdb TO testuser;
 ALTER SCHEMA public OWNER TO testuser;
 GRANT ALL PRIVILEGES ON SCHEMA public TO testuser;
 ALTER USER testuser SET search_path TO public;
-
 \q
 
-5. Запускаем сервер
-   python manage.py migrate
-   python manage.py runserver
+5. Запускаем сервер 
+python manage.py migrate
+python manage.py runserver
 
    Открыть в браузере:
 
