@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Данные из JSON</title>
+</head>
+<body>
+  <h1>Сохранённые данные</h1>
+  <ul>
+    {% for item in all_data %}
+      <li>{{ item.created_at }}: {{ item.data }}</li>
+    {% empty %}
+      <li>Нет данных</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'form' %}">Вернуться к форме</a>
+</body>
+</html>

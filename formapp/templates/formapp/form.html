@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <div id="inputs">
+            <input type="text" name="field[]" placeholder="Введите значение">
+        </div>
+        <button type="button" id="add">Добавить поле</button>
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script>
+        $('#add').click(function () {
+            $('#inputs').append('<input type="text" name="field[]" placeholder="Введите значение">');
+        });
+    </script>
+</body>
+</html>
+
+
+
